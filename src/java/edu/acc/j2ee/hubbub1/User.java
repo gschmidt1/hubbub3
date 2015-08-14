@@ -1,10 +1,13 @@
-package edu.acc.j2ee.hubbub0;
+package edu.acc.j2ee.hubbub1;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class User implements java.io.Serializable {
     private String userName;
     private Date joinDate;
+    private List<Post> posts = new ArrayList<>();
     
     public User(String userName, Date joinDate) {
         this.userName = userName;
@@ -27,6 +30,10 @@ public class User implements java.io.Serializable {
 
     public void setJoinDate(Date joinDate) {
         this.joinDate = joinDate;
+    }
+    
+    public List<Post> getPosts() {
+        return posts;
     }
     
     @Override
