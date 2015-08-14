@@ -14,13 +14,6 @@ public class Controller extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        /*
-        List<User> users = (List<User>)getServletContext().getAttribute("users");
-        List<Post> posts = new ArrayList<>();
-        for (User user : users)
-            posts.addAll(user.getPosts());
-        Collections.sort(posts, new PostComparator());
-        */
         HubbubDAO db = (HubbubDAO)getServletContext().getAttribute("db");
         List<Post> posts = db.getSortedPosts();
         request.setAttribute("posts", posts);
