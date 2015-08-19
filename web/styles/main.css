@@ -1,0 +1,6 @@
+.postdiv {border: 1px solid teal; margin: 8px; padding: 8px;}
+.authorspan {margin: 8px; padding: 8px; font-size: larger;}
+.datespan {font-size: smaller;}
+.contentdiv {background-color: lightgray; margin: 8px; padding: 8px;}
+.footer {background-color: #fedcba;}
+.flash {color: red;}

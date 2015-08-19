@@ -5,19 +5,21 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Hubbub 1 -- Timeline</title>
-        <style type="text/css">
-            .postdiv {border: 1px solid teal; margin: 8px; padding: 8px;}
-            .authorspan {margin: 8px; padding: 8px; font-size: larger;}
-            .datespan {font-size: smaller;}
-            .contentdiv {background-color: lightgray; margin: 8px; padding: 8px;}
-            .footer {background-color: #fedcba;}
-        </style>
+        <title>Hubbub 2 -- Timeline</title>
+        <link rel="stylesheet" type="text/css" href="styles/main.css"/>
     </head>
     <body>
         <img src="images/hubbub.png"/><br/>
-        <h1>Welcome to Hubbub&trade;!</h1>
+        <h1>Welcome to Hubbub&trade;<c:if test="${user ne null}">, ${user.userName}</c:if>!</h1>
         <h2>Timeline</h2>
+        <c:choose>
+            <c:when test="${user ne null}">
+                <p><a href="main?action=post">Post Something</a> | <a href="main?action=logout">Log Out</a></p>
+            </c:when>
+            <c:otherwise>
+                <p><a href="main?action=login">Log in to Hubbub&trade;.</a></p>
+            </c:otherwise>
+        </c:choose>
         <c:forEach var="post" items="${posts}">
             <div class="postdiv">
                 <span class="authorspan">${post.author}</span>

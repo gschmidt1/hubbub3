@@ -7,10 +7,12 @@ import java.util.List;
 public class User implements java.io.Serializable {
     private String userName;
     private Date joinDate;
-    private List<Post> posts = new ArrayList<>();
+    private String password;
+    private final List<Post> posts = new ArrayList<>();
     
-    public User(String userName, Date joinDate) {
+    public User(String userName, String password, Date joinDate) {
         this.userName = userName;
+        this.password = password;
         this.joinDate = joinDate;
     }
     
@@ -22,6 +24,14 @@ public class User implements java.io.Serializable {
 
     public Date getJoinDate() {
         return joinDate;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public void setUserName(String userName) {
