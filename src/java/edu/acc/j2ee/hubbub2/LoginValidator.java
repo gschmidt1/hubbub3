@@ -1,4 +1,4 @@
-package edu.acc.j2ee.hubbub1;
+package edu.acc.j2ee.hubbub2;
 
 public class LoginValidator {
     public static boolean validate(LoginBean bean) {

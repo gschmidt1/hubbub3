@@ -2,11 +2,11 @@
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <listener>
         <description>ServletContextListener</description>
-        <listener-class>edu.acc.j2ee.hubbub1.StartupListener</listener-class>
+        <listener-class>edu.acc.j2ee.hubbub2.StartupListener</listener-class>
     </listener>
     <servlet>
         <servlet-name>Controller</servlet-name>
-        <servlet-class>edu.acc.j2ee.hubbub1.Controller</servlet-class>
+        <servlet-class>edu.acc.j2ee.hubbub2.Controller</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Controller</servlet-name>

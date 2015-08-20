@@ -1,6 +1,10 @@
-.postdiv {border: 1px solid teal; margin: 8px; padding: 8px;}
+body {font-family: sans-serif;}
+.postdiv {border: 1px solid #93c4be; margin: 8px; padding: 8px;}
 .authorspan {margin: 8px; padding: 8px; font-size: larger;}
 .datespan {font-size: smaller;}
-.contentdiv {background-color: lightgray; margin: 8px; padding: 8px;}
-.footer {background-color: #fedcba;}
+.contentdiv {background-color: #93c4be; margin: 8px; padding: 8px;}
+.footer {background-color: #e2ddd3;}
+
+#loginform {border-collapse: collapse;}
+#loginform td {border: 1px solid #93c4be; padding: 8px; margin: 8px;}
 .flash {color: red;}

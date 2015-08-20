@@ -1,4 +1,4 @@
-package edu.acc.j2ee.hubbub1;
+package edu.acc.j2ee.hubbub2;
 
 import java.io.IOException;
 import java.util.List;
