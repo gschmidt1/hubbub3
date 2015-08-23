@@ -1,4 +1,4 @@
-package edu.acc.j2ee.hubbub2;
+package edu.acc.j2ee.hubbub3;
 
 import java.util.Date;
 import javax.servlet.ServletContextEvent;

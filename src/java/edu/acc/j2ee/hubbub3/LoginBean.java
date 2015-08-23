@@ -1,4 +1,4 @@
-package edu.acc.j2ee.hubbub2;
+package edu.acc.j2ee.hubbub3;
 
 public class LoginBean implements java.io.Serializable {
     private String userName;
