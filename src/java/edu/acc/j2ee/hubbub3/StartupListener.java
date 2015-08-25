@@ -1,6 +1,5 @@
 package edu.acc.j2ee.hubbub3;
 
-import java.util.Date;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
@@ -9,6 +8,7 @@ public class StartupListener implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent sce) {
         HubbubDAO db = new HubbubDAO();
+       /*
         User jd = new User("johndoe", "password", new Date(113, 4, 9));
         User jj = new User("jilljack", "password", new Date(113, 9, 31));
         db.addUser(jd);
@@ -31,6 +31,7 @@ public class StartupListener implements ServletContextListener {
                 new Date(113, 10, 1),
                 jj);
         db.addPost(three);
+        */
         sce.getServletContext().setAttribute("db", db);
     }
 
