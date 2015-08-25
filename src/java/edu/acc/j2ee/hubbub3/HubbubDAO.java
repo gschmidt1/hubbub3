@@ -83,7 +83,7 @@ public class HubbubDAO {
                         resultSet.getString("PASSWORD"),
                         resultSet.getDate("JOINDATE"));
                 
-                //addUser(user);
+                addUser(user);
                 
                 Post post = new Post(
                         resultSet.getString("CONTENT"),
@@ -97,6 +97,16 @@ public class HubbubDAO {
         } catch (SQLException se) {
             se.printStackTrace();
         }
+        finally{
+            try{
+                resultSet.close();
+            }
+            catch(SQLException se){
+                se.printStackTrace();
+                 
+            }
+        }
+            
         /*
         List<Post> posts = new ArrayList<>();
         for (User user : users)
