@@ -32,6 +32,8 @@ public class StartupListener implements ServletContextListener {
                 jj);
         db.addPost(three);
         */
+        db.getSortedPosts();
+        
         sce.getServletContext().setAttribute("db", db);
     }
 

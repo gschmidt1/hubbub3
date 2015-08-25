@@ -14,6 +14,7 @@ public class HubbubDAO {
     private PreparedStatement selectUser = null;
     private PreparedStatement insertPost = null;
     private static final String URL_CONNECT = "jdbc:derby://localhost:1527/sample;user=app;password=app";
+   
     public HubbubDAO(){
         try {
             Connection conn = DriverManager.getConnection(URL_CONNECT);
@@ -45,6 +46,12 @@ public class HubbubDAO {
     
    // public void addPost(Post post) {
     //    int author = find(post.getAuthor().getUserName());
+    //    author.getPosts().add(post);
+   // }
+    public void addPost(Post post){
+        //posts.add(post);
+    }
+     //    int author = find(post.getAuthor().getUserName());
     //    author.getPosts().add(post);
    // }
     
@@ -87,7 +94,8 @@ public class HubbubDAO {
                 
                 results.addAll(user.getPosts());
             }
-        } catch (Exception e) {
+        } catch (SQLException se) {
+            se.printStackTrace();
         }
         /*
         List<Post> posts = new ArrayList<>();
